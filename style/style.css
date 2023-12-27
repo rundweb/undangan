@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Carattere&family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+:root {
+  --black-primary: #6f1d1b;
+  --colort-cream: #bb9457;
+}
+
+.container {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+
+.content-text-top {
+  margin-bottom: 40px;
+}
+
+.content-text-top h3 {
+  color: var(--black-primary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-text-middle{
+    margin-bottom: 20px;
+}
+
+.content-text-middle h1 {
+  color: var(--colort-cream);
+  font-size: 90px;
+  font-family: "Carattere", cursive;
+  line-height: 70px;
+}
+
+.content-text-middle p {
+  color: var(--colort-cream);
+  font-family: "Carattere", cursive;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text-bottom-top{
+    margin-bottom: 5px;
+}
+
+.text-bottom-top p{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black-primary);
+}
+
+.text-bottom-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text-bottom-date h4{
+    color: var(--black-primary);
+    font-size: 18px;
+    font-weight: 800;
+    position: relative; 
+    padding: 6px 10px;
+    border-bottom: 3px solid var(--black-primary);
+    border-top: 3px solid var(--black-primary);
+}
+
+
+.text-bottom-date h3{
+    color: var(--black-primary);
+    font-size: 56px;
+}
+
+.btn-link{
+    margin-top: 20px;
+}
+
+.btn-link p{
+    color: var(--black-primary);
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+.btn-link h5{
+    color: var(--colort-cream);
+    margin: 16px 0 36px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.btn-link a{
+    background-color: var(--colort-cream);
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 28px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px var(--colort-cream);
+}
+
+.img1{
+    position: absolute;
+    top: -8%;
+    width: 300px;
+    left: -8%;
+    z-index: -1;
+}
+
+.img2{
+    position: absolute;
+    bottom: -8%;
+    width: 300px;
+    right: -8%;
+    z-index: -1;
+    rotate: 180deg;
+}
+
+.img3{
+    position: absolute;
+    width: 150px;
+    rotate: 110deg;
+    bottom: -10%;
+    left: -5%;
+}
+
+.img4{
+    position: absolute;
+    width: 150px;
+    rotate: 290deg;
+    top: -10%;
+    right: -5%;
+}
