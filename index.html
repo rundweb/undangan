@@ -4,50 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedding Of Eka & Eroh</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-        <div class="container">
-            <div class="img1">
-                <img src="images/pink.png" alt="">
-            </div>
-            <div class="img2">
-                <img src="images/pink.png" alt="">
-            </div>
+    
+    <div class="container">
+      <div class="img1" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="images/pink.png" alt="" />
+      </div>
+      <div class="img2" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="images/pink.png" alt="" />
+      </div>
 
-            <div class="img3">
-                <img src="images/white.png" alt="">
-            </div>
+      <div class="img3" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="images/white.png" alt="" />
+      </div>
 
-            <div class="img4">
-                <img src="images/white.png" alt="">
-            </div>
-            <div class="content">
-                <div class="content-text-top">
-                    <h3>THE WEDDING OF</h3>
-                </div>
-                <div class="content-text-middle">
-                    <h1>Eroh</h1>
-                    <P>and</P>
-                    <h1>Eka</h1>
-                </div>
-                <div class="content-text-bottom">
-                    <div class="text-bottom-top">
-                        <p>December</p>
-                    </div>
-                    <div class="text-bottom-date">
-                        <h4>SUNDAY</h4>
-                        <h3>31</h3>
-                        <h4>9:00 PM</h4>
-                    </div>
-                </div>
-                <div class="btn-link">
-                    <p>Kepada Yth.</p>
-                    <p>Bapak/Ibu/Saudari/i</p>
-                    <h5>Abdul Muhtar & Partner</h5>
-                    <a href="pages/open.html">Open Invitation</a>
-                </div>
-            </div>
+      <div class="img4" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="images/white.png" alt="" />
+      </div>
+      <div class="content">
+        <div
+          class="content-text-top"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
+          <h3>THE WEDDING OF</h3>
         </div>
+        <div
+          class="content-text-middle"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
+          <h1>Eroh</h1>
+          <p>and</p>
+          <h1>Eka</h1>
+        </div>
+        <div
+          class="content-text-bottom"
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+        >
+          <div class="text-bottom-top">
+            <p>December</p>
+          </div>
+          <div class="text-bottom-date">
+            <h4>SUNDAY</h4>
+            <h3>31</h3>
+            <h4>9:00 PM</h4>
+          </div>
+        </div>
+        <div class="btn-link" data-aos="zoom-in" data-aos-duration="1200">
+          <p>Kepada Yth.</p>
+          <p>Bapak/Ibu/Saudari/i</p>
+          <h5 id="nama"></h5>
+          <a href="pages/open.html">Open Invitation</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function GetURLParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split("&");
+        for (var i = 0; i < sURLVariables.length; i++) {
+          var sParameterName = sURLVariables[i].split("=");
+          if (sParameterName[0] == sParam) {
+            return sParameterName[1];
+          }
+        }
+      }
+      var nama = GetURLParameter("nama");
+      var newName = nama.replace(/%20/g, " ");
+      document.getElementById("nama").innerHTML = newName;
+    </script>
   </body>
 </html>
