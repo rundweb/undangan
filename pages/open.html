@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedding of eka & eroh</title>
     <link rel="stylesheet" href="styleopen.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <audio autoplay>
+      <source src="admes.mp3" type="audio/mpeg">
+    </audio>
     <div class="container">
-      <div class="img1">
+      <div class="img1" data-aos="zoom-in" data-aos-duration="1000">
         <img src="../images/pink.png" alt="" />
       </div>
-      <div class="img4">
+      <div class="img4" data-aos="zoom-in" data-aos-duration="1000">
         <img src="../images/white.png" alt="" />
       </div>
       <div class="content">
-        <div class="text-top">
+        <div class="text-top" data-aos="zoom-in" data-aos-duration="1000">
           <h3>Assalamualaikum <br />Warahmatullahi Wabarokatuh</h3>
           <p>
             Mahasuci Allah telah menciptakan manusia dengan berpasang-pasangan.
@@ -30,14 +38,7 @@
       </div>
     </div>
     <div class="content-mempelai">
-      <div class="img2">
-        <img src="../images/pink.png" alt="" />
-      </div>
-
-      <div class="img3">
-        <img src="../images/white.png" alt="" />
-      </div>
-      <div class="mempelai">
+      <div class="mempelai" data-aos="zoom-in" data-aos-duration="1000">
         <div class="img-mempelai">
           <img src="../images/eka.png" alt="" />
         </div>
@@ -47,8 +48,8 @@
           Bapak Edi Suryadi & Ibu Ela Nurlaela
         </p>
       </div>
-      <h1>&</h1>
-      <div class="mempelai">
+      <h1 data-aos="zoom-in" data-aos-duration="1000">&</h1>
+      <div class="mempelai" data-aos="zoom-in" data-aos-duration="1000">
         <div class="img-mempelai">
           <img src="../images/istri.png" alt="" />
         </div>
@@ -61,27 +62,108 @@
     </div>
 
     <div class="container2">
-      <div class="akad-nikah">
+      <div class="img-space" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../images/pngwing.com.png" alt="" />
+      </div>
+      <div class="akad-nikah" data-aos="zoom-in" data-aos-duration="1000">
         <h1>Akad Nikah</h1>
         <h3>Minggu, 31 Desember 2023</h3>
         <p>09:00 WIB</p>
         <p>
-          Kp. Ciherang RT/RW 010/009 <br> Desa Gunung Malang Kec. Cikidang <br>Kab.
-          Sukabumi Jawa Barat
+          Kp. Ciherang RT/RW 010/009 <br />
+          Desa Gunung Malang Kec. Cikidang <br />Kab. Sukabumi Jawa Barat
         </p>
       </div>
-      <div class="img-space">
-        <img src="../images/pngwing.png" alt="" />
+      <div class="img-space" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="../images/pngwing.com.png" alt="" />
       </div>
-      <div class="akad-nikah">
+      <div class="akad-nikah" data-aos="zoom-in" data-aos-duration="1000">
         <h1>Resepsi</h1>
         <h3>Minggu, 31 Desember 2023</h3>
         <p>10:00 WIB</p>
         <p>
-            Kp. Ciherang RT/RW 010/009 <br> Desa Gunung Malang Kec. Cikidang <br>Kab.
-            Sukabumi Jawa Barat
+          Kp. Ciherang RT/RW 010/009 <br />
+          Desa Gunung Malang Kec. Cikidang <br />Kab. Sukabumi Jawa Barat
         </p>
       </div>
+      <div class="btn-lokasi" data-aos="zoom-in" data-aos-duration="1000">
+        <a href="https://maps.app.goo.gl/GD86uw9Lvs6F2psd6"
+          ><i class="bx bxs-map"></i> Kunjungi Lokasi Acara</a
+        >
+      </div>
     </div>
+
+    <div class="gift">
+      <div class="content-gift" data-aos="zoom-in" data-aos-duration="1000">
+        <h1>Wedding Gift</h1>
+        <p>
+          Doa restu anda merupakan karunia yang berarti bagi kami. Dan jika
+          memberi adalah ungkapan tanda kasih anda, anda dapat memberi kado
+          secara cashles.
+        </p>
+        <div class="img-bank">
+          <img src="../images/bca.png" alt="" />
+        </div>
+        <h2>BCA an. Eka Alfian</h2>
+        <input type="text" id="text-copy" value="4960482579" />
+        <button class="btn-copy" onclick="copyText()">
+          <i class="bx bxs-copy-alt"></i> Copy No. Rekening
+        </button>
+      </div>
+    </div>
+
+    <div class="doa">
+      <div class="content-doa" data-aos="zoom-in" data-aos-duration="1000">
+        <h1>Do'a Untuk Pengantin</h1>
+        <p>
+          "Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu
+          susah. dan mengumpulkan kalian berdua dalam kebaikan"
+        </p>
+        <p>[HR. Abu Daud]</p>
+        <h2>Menghitung Hari</h2>
+        <h3 id="demo"></h3>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      function copyText() {
+        var copyText = document.getElementById("text-copy");
+        copyText.select();
+        document.execCommand("copy");
+      }
+
+      // Set the date we're counting down to
+      var countDownDate = new Date("Dec 31, 2023 00:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
